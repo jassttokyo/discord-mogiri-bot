@@ -8,7 +8,8 @@ module.exports = {
 		mogiri(interaction.member);
 		interaction.reply('done.');
 	},
-	checkParticipant
+	checkParticipant,
+	mogiri
 };
 
 /**

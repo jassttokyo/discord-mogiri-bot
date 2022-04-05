@@ -1,4 +1,4 @@
-const mogiri = require("../commands/mogiri");
+const mogiri = require("../commands/mogiri").mogiri;
 
 module.exports = {
 	name: 'guildMemberAdd',
