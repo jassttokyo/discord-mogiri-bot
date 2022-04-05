@@ -8,6 +8,7 @@ module.exports = {
 		mogiri(interaction.member);
 		interaction.reply('done.');
 	},
+	checkParticipant
 };
 
 /**
@@ -37,5 +38,3 @@ function checkParticipant(name) {
 	if (!name) return false;
 	if (name.match(/.*To2-\d{5}.*/)) return true;
 }
-
-module.exports = checkParticipant;
