@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const { Client, Collection, Intents } = require('discord.js');
 
 // Create a new client instance
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, "GUILD_MEMBERS"] });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, "GUILD_MEMBERS"] });
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
