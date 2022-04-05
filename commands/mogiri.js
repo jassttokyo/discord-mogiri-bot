@@ -5,7 +5,7 @@ module.exports = {
 		.setName('mogiri')
 		.setDescription('mogiri command'),
 	async execute(interaction) {
-		mogiri(interaction.member);
+		interaction.guild.members.cache.forEach(m => mogiri(m));
 		interaction.reply('done.');
 	},
 	checkParticipant,
