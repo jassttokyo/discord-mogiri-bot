@@ -5,10 +5,12 @@
 1. このリポジトリをクローンする
 1. クローンしたリポジトリ内で`.env`ファイルを作成する
 1. 作成した`.env`ファイル内に、以下を記載する
-	- discord botのトークン
-	- clientId
-	- guildId
-	- 自動付与したいロールのID
+	- bot固有のもの(知りたい方は[@ropQa](https://twitter.com/ropQa)にDMください)
+		- discord botのトークン
+		- clientId
+	- Discordサーバー固有のもの(使用したいサーバー、ロールのIDをご使用ください)
+		- guildId
+		- 自動付与したいロールのID
 1. `node.js`の`v16.6.0`以上をインストールする
 1. `npm install`を実行する
 1. ルートディレクトリで`node deploy-commands.js`を実行し、コマンドを登録する
