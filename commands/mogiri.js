@@ -109,6 +109,7 @@ function mogiri(member, role, ticket, password) {
       result = checkParticipant(ticket, password)
       if (result == ADDED) {
         member.roles.add(process.env.participantRoleId)
+        console.log("Grant participant role to " + member.user.username)
 
         // どのdiscordユーザーがどのチケット番号でmogiriしたかを記録する
         db.insert(ticket, member.user.username)
@@ -122,6 +123,7 @@ function mogiri(member, role, ticket, password) {
       result = checkSponsor(ticket, password)
       if (result == ADDED) {
         member.roles.add(process.env.sponsorRoleId)
+        console.log("Grant sponsor role to " + member.user.username)
 
         // どのdiscordユーザーがどのチケット番号でmogiriしたかを記録する
         db.insert(ticket, member.user.username)
