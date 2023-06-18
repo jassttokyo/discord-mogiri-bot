@@ -111,10 +111,7 @@ function mogiri(member, role, ticket, password) {
         member.roles.add(process.env.participantRoleId)
 
         // どのdiscordユーザーがどのチケット番号でmogiriしたかを記録する
-        db.insert(
-          interaction.options.getString("チケット番号"),
-          interaction.member.user.username
-        )
+        db.insert(ticket, member.user.username)
       }
       return result
     case "スポンサー":
@@ -127,10 +124,7 @@ function mogiri(member, role, ticket, password) {
         member.roles.add(process.env.sponsorRoleId)
 
         // どのdiscordユーザーがどのチケット番号でmogiriしたかを記録する
-        db.insert(
-          interaction.options.getString("チケット番号"),
-          interaction.member.user.username
-        )
+        db.insert(ticket, member.user.username)
       }
       return result
     default:
